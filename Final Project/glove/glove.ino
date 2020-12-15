@@ -44,7 +44,7 @@ void loop() {
   // note playing code
   if (randomNotes == false){
     for (int i=0; i<5; i++) {
-      if(CircuitPlayground.readCap(capIndex[i])>600 || CircuitPlayground.readCap(capIndex[i])<1){
+      if(CircuitPlayground.readCap(capIndex[i])>700 || CircuitPlayground.readCap(capIndex[i])<100){
         CircuitPlayground.speaker.enable(true);
         CircuitPlayground.playTone(pitches[i+key],duration,false);
       }
@@ -73,7 +73,7 @@ void loop() {
 
   if (randomNotes == true){
     for (int i=0; i<5; i++) {
-      if(CircuitPlayground.readCap(capIndex[randList[i]])>600 || CircuitPlayground.readCap(capIndex[i])<1){
+      if(CircuitPlayground.readCap(capIndex[randList[i]])>700 || CircuitPlayground.readCap(capIndex[i])<100){
         CircuitPlayground.speaker.enable(true);
         CircuitPlayground.playTone(pitches[randList[i]+key],duration,false);
       }
